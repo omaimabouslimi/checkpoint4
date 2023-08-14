@@ -1,0 +1,15 @@
+function insertsort(tab) {
+  var len = tab.length;       
+  var tmp, i, j;                  
+  
+  for(i = 1; i < len; i++) {
+    tmp = tab[i]
+    j = i - 1
+    while (j >= 0 && tab[j] > tmp) {
+      tab[j+1] = tab[j]
+      j--
+    }
+    tab[j+1] = tmp
+  }
+  return tab
+}
